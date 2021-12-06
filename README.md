@@ -7,6 +7,7 @@ Practice with [Advent of Code 2021](https://adventofcode.com/2021)
 - [Day 3 ](https://adventofcode.com/2021/day/3)
 - [Day 4 ](https://adventofcode.com/2021/day/4)
 - [Day 5 ](https://adventofcode.com/2021/day/5)
+- [Day 6 ](https://adventofcode.com/2021/day/6)
 
 
 
