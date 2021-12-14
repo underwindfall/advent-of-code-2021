@@ -72,7 +72,7 @@ private fun part2() {
   println("Part2 ${a.size}")
   val b = Array(6) { CharArray(40) { '.' } }
   for (p in a) {
-      b[p.y][p.x] = '█'
+    b[p.y][p.x] = '█'
   }
 
   for (c in b) println(c.concatToString())
