@@ -1,4 +1,4 @@
-val input =
+private val input =
   getInputAsTest("16")[0].map { it.digitToInt(16).toString(2).padStart(4, '0') }.joinToString("")
 
 private fun part1() {
