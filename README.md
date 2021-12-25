@@ -24,6 +24,7 @@ Practice with [Advent of Code 2021](https://adventofcode.com/2021)
 - [Day 20 ](https://adventofcode.com/2021/day/20)
 - [Day 21 ](https://adventofcode.com/2021/day/21)
 - [Day 22 ](https://adventofcode.com/2021/day/22)
+- [Day 23 ](https://adventofcode.com/2021/day/23)
 
 
 
