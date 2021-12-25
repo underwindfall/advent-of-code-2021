@@ -1,4 +1,4 @@
-private data class Instruction(
+private data class ModInstruction(
   val on: Boolean,
   val x1: Int,
   val x2: Int,
@@ -10,11 +10,11 @@ private data class Instruction(
 
 private val input = parseInput(getInputAsTest("22"))
 
-private fun parseInput(input: List<String>): List<Instruction> {
+private fun parseInput(input: List<String>): List<ModInstruction> {
   val regex = Regex("x=([-\\d]+)..([-\\d]+),y=([-\\d]+)..([-\\d]+),z=([-\\d]+)..([-\\d]+)")
   return input.map {
     val l = regex.matchEntire(it.substringAfter(" "))!!.groupValues.drop(1).map(String::toInt)
-    Instruction("on" in it, l[0], l[1], l[2], l[3], l[4], l[5])
+    ModInstruction("on" in it, l[0], l[1], l[2], l[3], l[4], l[5])
   }
 }
 
@@ -33,9 +33,9 @@ private fun part1() {
 
 private fun part2() {
   val instructions = input
-  val cubes = mutableListOf<Instruction>()
+  val cubes = mutableListOf<ModInstruction>()
   instructions.forEach {
-    val overlaps = mutableListOf<Instruction>()
+    val overlaps = mutableListOf<ModInstruction>()
     cubes.forEach { cube ->
       val x1 = maxOf(it.x1, cube.x1)
       val x2 = minOf(it.x2, cube.x2)
@@ -45,7 +45,7 @@ private fun part2() {
       val z2 = minOf(it.z2, cube.z2)
 
       if (x1 <= x2 && y1 <= y2 && z1 <= z2)
-        overlaps.add(Instruction(!cube.on, x1, x2, y1, y2, z1, z2))
+        overlaps.add(ModInstruction(!cube.on, x1, x2, y1, y2, z1, z2))
     }
     cubes.addAll(overlaps)
     if (it.on) cubes.add(it)

@@ -56,7 +56,7 @@ data class Values(val div: Int, val check: Int, val offset: Int) {
 private fun partOne() = solve(9999999 downTo 1111111)
 
 // should start at 1111111, but speed it up starting near the correct answer
-private fun partTwo() = solve(2222222..9999999)
+private fun partTwo() = solve(1111111..9999999)
 
 fun main() {
     println("partOne() ${partOne()}")
